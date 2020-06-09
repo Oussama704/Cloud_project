@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="modifier.css">
+    <link rel="shortcut icon" href="images/NSCoding-feature.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<script>
+function decnx(){
+return alert("Vous etes sur que vous voullez vous déconnecter ?!");
+}
+</script>
+<header class="head1">
+    <div>
+        <img src="images/NSCoding-feature.png" height=70px width="70px"></div>
+
+    </div>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/acceuil01"><%=nom%> <%=prenom%></a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#contacter">Contactez-nous</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a onclick="return decnx();" href="destroy_session"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<br><br><br>
+<br>
+<div style="margin-left:10%;display: inline-block;">
+    <img style="display: inline-block;" src ="../uploads/<%=image%>" width="280px" height=320px" />
+    <form method="post" action="image" enctype="multipart/form-data" >
+        <input style="display: inline-block;" type="file" name="imgpro" id="imgpro" accept="image/*" required>
+        <input type="submit" name="submit" value="Enregistrer">
+    </form>
+</div>
+<div class="div1" style="margin-left: 10%; text-align:center; display: inline-block;">
+    <h4>Modifier les information de votre profile</h4>
+    <form method="post" action="infoprofile">
+
+        <input class="input" type="text" name="nom" placeholder=" Le nouveau Nom" required><br>
+        <input class="input" type="text" name="prenom" placeholder="Le nouveau prénom" required><br>
+        <input class="input" type="text" name="email" placeholder="une nouvelle adresse Email" required><br>
+        <input class="input" type="password" name="password0" placeholder="L'ancien mot de passe" required><br>
+        <input class="input" type="password" name="password" placeholder=" Nouveau Mot de passe" required><br>
+
+
+        <input class="submitbutton" type="submit" name="submit" value="Enregister" >
+
+    </form>
+</div>
+</body>
+</html>

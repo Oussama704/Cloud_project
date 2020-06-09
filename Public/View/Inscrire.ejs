@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>HOME</title>
+    <link rel="stylesheet" href="Inscrire.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="shortcut icon" href="images/NSCoding-feature.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+<header class="head1">
+    <div>
+        <img src="images/NSCoding-feature.png" height=70px width="70px">
+    </div>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/acceuil01">Bonjour Chez SUD-CLOUD</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#contacter">Contactez-nous</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a onclick="return decnx();" href="login"><span class="glyphicon glyphicon-log-in"></span>Connexion</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<script>
+    function validation() {
+        var email=document.forms["inscription"]["email"].value;
+        var pwd=document.forms["inscription"]["password"].value;
+        var pwdv=document.forms["inscription"]["passwordv"].value;
+        if(email.substr(-10)!=="@gmail.com"){
+            alert("Vous deverez avoir une adresse mail gmail");
+        }
+        if(pwd!==pwdv ){
+            alert("Votre Mot de passe est invalide");
+        }
+        if(pwd.length<8 ){
+            alert("Votre Mot de passe est court");
+        }
+        
+    }
+</script>
+<div style=" border: solid 1px ;">
+    <div class="div1" style="text-align: center";>
+        <h4>Créer un Compte</h4>
+        <form name="inscription" method="post" onsubmit="return validation()">
+            <input class="input" type="name" name="prenom" placeholder="Prénom" required><br>
+            <input class="input" type="text" name="nom" placeholder="Nom" required><br>
+            <input  class="input" type="email" name="email" placeholder=" Addresse E-mail" required><br>
+            <input class="input" type="password" name="password" placeholder="Mot de passe" required><br>
+            <input class="input" type="password" name="passwordv" placeholder="Confirmer le passe" required><br>
+            <p style="color: red"></p>
+            <a href="login">Avez-vous déjà un compte ? </a><br/>
+            <label><input type="checkbox" required>Conditions générales d'usage</d><br>
+                et notamment la mention relative à la protection des données personnelles.<br> Conformément à la loi 09-08, vous disposez d'un droit d'accès,de rectification et d'opposition au traitement de vos données personnelles.</label><br>
+            <input class="submitbutton" type="submit" name="submit" value="S'INSCRIRE" ><button class="facebookbutton" type="submit" name="submit" > CREER VOTRE COMPTE AVEC FACEBOOK</button>
+        </form>
+
+    </div>
+
+</div>
+<div class="div1">
+
+
+</div>
+<div class="Copyrightes">
+    <div class="contacter" id="contacter">
+        <br><br>
+        <form>
+            <input type="text" name="Email" placeholder="Email" style="background: transparent; border: 1px solid #808080;height : 30px;width: 200px; color:#808080 ;" ><br><br><br>
+            <input type="text" name="Nom" placeholder="Nom" style="background: transparent; border: 1px solid #808080; height: 30px; width: 200px; color:#808080"><br><br><br>
+            <TEXTAREA  style="background: transparent; border: 1px solid #808080; height: 100px; width: 200px; color:#808080">
+            </TEXTAREA>  <br><br>
+            <input type="submit" name="Envoyer" value="Envoyer" style="margin-left: 140px; background-color: rgb(191, 128, 64); border: none; height: 30px;  color: white;">
+        </form>
+    </div>
+    <div class="contacter" >
+        <br><br>
+        <span>CONTACTEZ-NOUS  :  </span><br><br><br>
+        <span>Tel : +212 639925748</span><br><br><br>
+        <span>Adresse : oussama.arifllah@gmail.com </span><br><br><br>
+        <span>© 2020 par Oussama Arifallah. All right reserved </span><br><br><br>
+    </div>
+</div>
+
+</body>
+</html>
+

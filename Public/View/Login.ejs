@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="Login.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="shortcut icon" href="images/NSCoding-feature.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<img src="images/NSCoding-feature.png" height=70px width="70px"></div>
+<div>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/acceuil01">Bonjour Chez SUD-CLOUD</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#contacter">Contactez-nous</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a onclick="return decnx();" href="inscrire"><span class="glyphicon glyphicon-user"></span>Inscrire</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div >
+
+    <div class="div1" style="text-align: center";>
+        <h4>Connexion</h4>
+        <p style="text-align: center;color: red"><%=msgemail%></p>
+        <p style="text-align: center;color: red"><%=msgpwd%></p>
+        <form method="post">
+
+            <input class="input" type="text" name="email" placeholder=" Addresse E-mail"><br>
+            <input class="input" type="password" name="password" placeholder="Mot de passe"><br>
+            <a href="#">Mot de passe oublié ?</a><br><br>
+            <a href="inscrire">Vous n'avez pas de compte ?</a><br>
+            <input class="submitbutton" type="submit" name="submit" value="SE CONNECTER" >
+
+        </form>
+        <a href="gmail"><button  class="facebookbutton" type="submit" name="submit" >SE CONNECTER AVEC FACEBOOK</button></a>
+    </div>
+
+</div>
+<br><br><br><br>
+<div class="div1">
+
+
+</div>
+<div class="Copyrightes">
+    <div class="contacter" id="contacter">
+        <br><br>
+        <form>
+            <input type="text" name="Email" placeholder="Email" style="background: transparent; border: 1px solid #808080;height : 30px;width: 200px; color:#808080 ;" ><br><br><br>
+            <input type="text" name="Nom" placeholder="Nom" style="background: transparent; border: 1px solid #808080; height: 30px; width: 200px; color:#808080"><br><br><br>
+            <TEXTAREA  style="background: transparent; border: 1px solid #808080; height: 100px; width: 200px; color:#808080">
+            </TEXTAREA>  <br><br>
+            <input type="submit" name="Envoyer" value="Envoyer" style="margin-left: 140px; background-color: rgb(191, 128, 64); border: none; height: 30px;  color: white;">
+        </form>
+    </div>
+    <div class="contacter" >
+        <br><br>
+        <span>CONTACTEZ-NOUS  :  </span><br><br><br>
+        <span>Tel : </span><br><br><br>
+        <span>Adresse : </span><br><br><br>
+        <span>© 2020 par Oussama Arifallah. All right reserved </span><br><br><br>
+    </div>
+</div>
+
+</body>
+</html>
+
