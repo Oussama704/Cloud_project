@@ -34,11 +34,13 @@ con.connect(function(err) {
 });
 
 router.get('/',(req,res)=>{
-    res.render('acceuil');
+    if(req.session.email!==undefined)
+        res.render('acceuil01',{nom:sess.nom,prenom:sess.prenom});
+    else res.render('acceuil');
 })
 router.get('/login',(req,res)=>{
     if(req.session.email!==undefined) {
-        res.redirect('/profile?email=Oussama');
+        res.redirect('/profile');
     }
     else {
         res.render('Login',{msgemail:null,msgpwd:null});
@@ -102,13 +104,6 @@ router.get('/profile',(req,res)=>{
 
 
 
-router.get('/acceuil01',(req,res)=>{
-    if(req.session.idp!==undefined){
-        res.render('acceuil01',{nom:sess.nom,prenom:sess.prenom});
-    }
-    else res.redirect('/');
-})
-
 router.get('/modifier',(req,res)=>{
     if(req.session.email===undefined) {
         res.redirect('/login');
@@ -148,7 +143,7 @@ router.post('/login',(req,res)=>{
             if (err) throw err;
             if(result.length===0){
                 console.log("Error !! ");
-                res.render('Login',{msgemail:'Email déjà erroné',msgpwd:null});
+                res.render('Login',{msgemail:'Email déjà utilisé',msgpwd:null});
             }
             else {
 
@@ -229,6 +224,8 @@ router.post('/upload',uploaddata.single('data'),(req,res)=>{
 
             });
         }
+
+
 
         res.redirect('/profile');
 
