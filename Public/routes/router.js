@@ -10,11 +10,11 @@ const uploaddata=require('../model/uploaddata');
 const jwt = require('jsonwebtoken');
 
 var con =mysql.createConnection( {
-    host:'127.0.0.1',
-    user:'root',
-    password:'root',
-    port:3307,
-    database:'base1'
+    host:'db.cznzbhud3xml.us-east-1.rds.amazonaws.com',
+    user:'admin',
+    password:'rootroot',
+    port:3306,
+    database:'db'
 
 })
 
